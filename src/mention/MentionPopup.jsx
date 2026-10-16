@@ -94,7 +94,9 @@ if (!cardId) {
   // 2) Compose
   if (selected) {
     const groupMembers = resolveMembers(selected, membersById);
-    const others = groupMembers.filter((m) => m.id !== me?.id);
+    const others = groupMembers.filter(
+  (m) => m.id !== me?.id && m.username
+);
     return (
       <div className="mn">
         <div className="mn__head">
