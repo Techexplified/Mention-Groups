@@ -103,10 +103,15 @@ if (!cardId) {
           <button type="button" className="mg-icon-btn" onClick={() => { setSelected(null); setError(""); }} aria-label="Back"><BackIcon width={18} height={18} /></button>
           <span className="mg-chip mn__chip">@{selected.name}</span>
         </div>
-        <div className="mn__notify">
-          <BellIcon width={14} height={14} />
-          <span>{plural(others.length, "member")} will be notified: {others.map((m) => m.fullName).join(", ") || "nobody else"}.</span>
-        </div>
+       <div className="mn__notify">
+  <BellIcon width={14} height={14} />
+  <span>
+    This group will be mentioned:{" "}
+    {others.length
+      ? others.map((m) => m.fullName).join(", ")
+      : "no other members"}.
+  </span>
+</div>
         <label className="mg-label" htmlFor="mn-msg">Message (optional)</label>
         <textarea id="mn-msg" className="mn__textarea" maxLength={MAX_MESSAGE} autoFocus placeholder="Write your comment…" value={message} onChange={(e) => setMessage(e.target.value)} />
         {error && <div className="mg-error" role="alert">{error}</div>}
