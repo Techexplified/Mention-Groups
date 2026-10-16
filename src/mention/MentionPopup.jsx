@@ -85,8 +85,9 @@ if (!cardId) {
       <div className="mn mn__center">
         <div className="mn__done"><CheckIcon width={26} height={26} /></div>
         <h3 style={{ fontSize: 16 }}>Comment posted</h3>
-        <p className="mn__muted">{plural(notified.length, "member")} notified in {selected.name}: {notified.map((m) => m.fullName).join(", ")}.</p>
-        <button type="button" className="mg-btn mg-btn--primary mg-btn--block" onClick={() => t.closePopup()}>Done</button>
+<p className="mn__muted">
+  {plural(resolveMembers(selected, membersById).length, "group member")} in {selected.name}.
+</p>        <button type="button" className="mg-btn mg-btn--primary mg-btn--block" onClick={() => t.closePopup()}>Done</button>
       </div>
     );
   }
