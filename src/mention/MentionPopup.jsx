@@ -105,12 +105,7 @@ if (!cardId) {
         </div>
        <div className="mn__notify">
   <BellIcon width={14} height={14} />
-  <span>
-    This group will be mentioned:{" "}
-    {others.length
-      ? others.map((m) => m.fullName).join(", ")
-      : "no other members"}.
-  </span>
+  <span>All group members will be mentioned.</span>
 </div>
         <label className="mg-label" htmlFor="mn-msg">Message (optional)</label>
         <textarea id="mn-msg" className="mn__textarea" maxLength={MAX_MESSAGE} autoFocus placeholder="Write your comment…" value={message} onChange={(e) => setMessage(e.target.value)} />
