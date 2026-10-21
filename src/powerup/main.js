@@ -5,8 +5,8 @@ import { isAuthorized } from "../lib/auth.js";
 const origin = window.location.origin;
 
 const ICON = {
-  dark: `${origin}/icons/icon-white.svg`,
-  light: `${origin}/icons/icon-dark.svg`,
+  dark: `${origin}/icons/icon.png`,
+  light: `${origin}/icons/icon.png`,
 };
 
 // Open the group management screen.
