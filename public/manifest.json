@@ -1,8 +1,8 @@
 {
   "name": "Mention Groups",
   "details": "Create reusable groups of board members and mention the whole group with one click.",
-  "icon": {
-  "url": "https://mention-groups.vercel.app/icons/icon.png"
+ "icon": {
+  "url": "./icons/icon.png"
 },
   "author": "Surbhi",
   "capabilities": [
