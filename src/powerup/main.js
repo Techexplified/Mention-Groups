@@ -71,10 +71,10 @@ TrelloPowerUp.initialize({
     ];
   },
 
- "card-buttons": function () {
+"card-buttons": function () {
   return [
     {
-      icon: ICON,
+      icon: `${origin}/icons/icon-dark.svg`,
       text: "Mention Group",
       condition: "always",
       callback: openMentionPicker,
