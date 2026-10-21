@@ -4,7 +4,10 @@ import { isAuthorized } from "../lib/auth.js";
 
 const origin = window.location.origin;
 
-const ICON = "https://mention-groups.vercel.app/icons/icon.png";
+const ICON = {
+  dark: `${origin}/icons/icon-white.svg`,
+  light: `${origin}/icons/icon-dark.svg`,
+};
 
 // Open the group management screen.
 function openGroupsManager(t) {
