@@ -37,9 +37,8 @@ async function openMentionPicker(t) {
       height: 480,
     });
   } catch (error) {
-    console.error("Mention Groups could not open:", error);
-    throw error;
-  }
+  throw error;
+}
 }
 
 TrelloPowerUp.initialize({
