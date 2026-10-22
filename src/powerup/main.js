@@ -36,8 +36,12 @@ async function openMentionPicker(t) {
       url: "./mention.html",
       height: 480,
     });
-  } catch (error) {
-  throw error;
+  }  catch (error) {
+  return t.popup({
+    title: "Mention Groups",
+    url: "./groups.html",
+    height: 420,
+  });
 }
 }
 
